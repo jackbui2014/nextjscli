@@ -1,0 +1,30 @@
+{
+  "name": "nextjscli",
+  "version": "1.0.0",
+  "description": "A simple nextjs CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "nextcli": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackbui2014/nextjscli.git"
+  },
+  "keywords": [
+    "Nextjs",
+    "CLI"
+  ],
+  "author": "Jack Bui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackbui2014/nextjscli/issues"
+  },
+  "homepage": "https://github.com/jackbui2014/nextjscli#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "handlebars": "^4.7.7"
+  }
+}

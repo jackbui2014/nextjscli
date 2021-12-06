@@ -1,0 +1,11 @@
+import mount from "@test/mount";
+import {{ name }}  from "./index";
+
+describe("{{name}} component testing with enzyme", ()=>{
+  const component = mount(<{{name}} />);
+  
+  it("renders without crashing", ()=>{
+    expect(component).toBeTruthy();
+  });
+
+});
