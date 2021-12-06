@@ -6,6 +6,7 @@ const [,, ...args] = process.argv
 const c = require('./index');
 const allowArray = ['create:component'];
 if( typeof args['0'] !== 'undefined'){
+	console.log(args);
 	switch (args['0']){
 		case 'create:component': 
 			if( allowArray.indexOf(args['0'].toLowerCase()) != -1 ){
