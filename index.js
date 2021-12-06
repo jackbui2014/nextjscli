@@ -20,7 +20,9 @@ const createComponentList = (dir, componentName)=>{
 	const componentDir = dir+'components/'+componentName+'/';
 	const componentDirBase = dir+'components/'+componentName;
 	const interfacesDir = dir+'interfaces/';
+	console.log(componentDirBase);
 	fileControl.createDir('/'+componentDirBase);
+	fileControl.createDir('/'+interfacesDir);
 	console.log(componentDirBase);
 	fileControl.createFileFromTemplate(path.join(__dirname, '/templates/components/component-list.hbs'), componentDir+'index.tsx', componentName);
 	fileControl.createFileFromTemplate(path.join(__dirname, '/templates/components/component-list-item.hbs'), componentDir+'item.tsx', componentName);
