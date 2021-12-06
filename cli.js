@@ -11,6 +11,7 @@ if( typeof args['0'] !== 'undefined'){
 			if( allowArray.indexOf(args['0'].toLowerCase()) != -1 ){
 				if( typeof args['1'] !== 'undefined'){
 					c.createComponent('src/components/', args['1']);
+					console.log('Success!');
 				}
 				else{
 					console.log('Error!');
