@@ -13,6 +13,7 @@ if( typeof args['0'] !== 'undefined'){
 				if( typeof args['1'] !== 'undefined'){
 					if( typeof args[2] !== 'undefined' ){
 						const type = args[2].split('=');
+						console.log(type);
 						if( type[0] === '--type' ){
 							switch( type[1] ){
 								case 'list':
