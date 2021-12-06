@@ -31,12 +31,9 @@ exports.createComponentList = createComponentList;
 
 const createComponentLayout = (dir, componentName)=>{
 	const componentDir = dir+'components/'+componentName+'/';
-	const interfacesDir = dir+'interfaces/';
 	fileControl.createDir('/'+componentDir);
-	fileControl.createDir('/'+interfacesDir);
-	fileControl.createFileFromTemplate(path.join(__dirname, '/templates/components/component-typescript.hbs'), componentDir+'index.tsx', componentName);
+	fileControl.createFileFromTemplate(path.join(__dirname, '/templates/components/component-layout.hbs'), componentDir+'index.tsx', componentName);
 	fileControl.createFileFromTemplate(path.join(__dirname, '/templates/components/component.test.hbs'), componentDir+'index.spec.tsx', componentName);
   fileControl.createFileFromTemplate(path.join(__dirname, '/templates/components/component.scss.hbs'), componentDir+componentName+'.module.scss', componentName.toLowerCase());
-	fileControl.createFileFromTemplate(path.join(__dirname, '/templates/interfaces/index.hbs'), interfacesDir+componentName+'.tsx', componentName);
 }
 exports.createComponentLayout = createComponentLayout;

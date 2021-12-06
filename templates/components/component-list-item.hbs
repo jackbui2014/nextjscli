@@ -5,12 +5,13 @@ type Props = {
   data: {{name}}Type
 }
 
-const {{name}}Item = ({ data }: Props) => (
+const {{name}}Item = ({ data }: Props) => {
+  return (
   <Link href="/{{name}}s/[id]" as={`/{{name}}s/${data.id}`}>
     <a>
       {data.id}: {data.name}
     </a>
   </Link>
-)
+)}
 
 export default {{name}}Item
