@@ -1,3 +1,7 @@
+var handlebars = require("handlebars");
+var fs = require("fs"),
+  path = require("path");
+
 const fileControl = require('./inc/filesControl');
 
 const createComponent = (dir, componentName)=>{
