@@ -13,17 +13,20 @@ if( typeof args['0'] !== 'undefined'){
 				if( typeof args['1'] !== 'undefined'){
 					if( typeof args[2] !== 'undefined' ){
 						const type = args[2].split('=');
-						console.log(type);
+						console.log(type[0]);
 						if( type[0] === '--type' ){
 							switch( type[1] ){
 								case 'list':
 									c.createComponentList('src/', args['1']);
+									console.log('entered1');
 									break;
 								case 'layout':
 									c.createComponentLayout('src/', args['1']);
+									console.log('entered1');
 									break;
 								default: 
 									c.createComponent('src/', args['1']);
+									console.log('entered1');
 									break;
 							}
 						}
