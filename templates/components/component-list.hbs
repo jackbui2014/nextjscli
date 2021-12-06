@@ -1,0 +1,19 @@
+import * as React from 'react'
+import {{name}}Item from './{{name}}Item'
+import { {{name}}Type } from '../interfaces/{{name}}';
+
+type Props = {
+  items: {{name}}Type[]
+}
+
+const {{name}} = ({ items }: Props) => (
+  <ul>
+    {items.map((item) => (
+      <li key={item.id}>
+        <ListItem data={item} />
+      </li>
+    ))}
+  </ul>
+)
+
+export default {{name}}

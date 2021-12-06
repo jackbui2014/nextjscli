@@ -1,0 +1,16 @@
+import React from 'react'
+import { {{name}}Type } from '../interfaces/{{name}}';
+
+type Props = {
+  data: {{name}}Type
+}
+
+const {{name}}Item = ({ data }: Props) => (
+  <Link href="/{{name}}s/[id]" as={`/{{name}}s/${data.id}`}>
+    <a>
+      {data.id}: {data.name}
+    </a>
+  </Link>
+)
+
+export default {{name}}Item
