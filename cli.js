@@ -48,6 +48,8 @@ if( typeof args['0'] !== 'undefined'){
 
 		 break;
 		case 'setup':
+				c.setup();
+				console.log('Success!');
 			break;
 		default: 
 			console.log('Invalid syntax!');
