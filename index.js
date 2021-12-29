@@ -37,3 +37,8 @@ const createComponentLayout = (dir, componentName)=>{
   fileControl.createFileFromTemplate(path.join(__dirname, '/templates/components/component.scss.hbs'), componentDir+componentName+'.module.scss', componentName.toLowerCase());
 }
 exports.createComponentLayout = createComponentLayout;
+
+const setup = () => {
+	fileControl.createFileFromTemplate(path.join(__dirname, '/templates/package.hbs'), '/');
+}
+exports.setup = setup;

@@ -4,7 +4,10 @@
 const [,, ...args] = process.argv
 
 const c = require('./index');
-const allowArray = ['create:component'];
+const allowArray = [
+	'create:component',
+	'setup'
+];
 if( typeof args['0'] !== 'undefined'){
 	switch (args['0']){
 		case 'create:component': 
@@ -44,6 +47,8 @@ if( typeof args['0'] !== 'undefined'){
 			}
 
 		 break;
+		case 'setup':
+			break;
 		default: 
 			console.log('Invalid syntax!');
 			return false;
