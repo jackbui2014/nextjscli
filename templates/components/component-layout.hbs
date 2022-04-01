@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const {{name}}: FunctionComponent<I{{name}}> = (props) => {
   let { children } = props;
   return (
-    <div clasName={cx(styles['{{name}}-css'], props.className)}>
+    <div className={cx(styles['{{name}}-css'.toLowerCase()], props.className)}>
       { children && (
         <div className={cx(styles['inner'])}>
           {children}

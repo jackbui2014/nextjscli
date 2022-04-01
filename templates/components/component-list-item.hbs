@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const {{name}}Item: FunctionComponent<I{{name}}Item> = (props) => {
   let { data } = props;
   return (
-  <div className={cx(styles['{{name}}Item-css'], props.className)}
+  <div className={cx(styles['{{name}}Item-css'.toLowerCase()], props.className)}
   <Link href="/{{name}}s/[id]" as={`/{{name}}s/${data.id}`}>
     <a>
       {data.id}: {data.name}
