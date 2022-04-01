@@ -7,7 +7,7 @@ const fileControl = require('./inc/filesControl');
 const createComponent = (dir, componentName)=>{
 	const componentArr = componentName.split('/');
 	let componentNameFinal = dir+'components/';
-	componentArr.each((item, index)=>{
+	componentArr.foEach((item, index)=>{
 		componentNameFinal += item+'/';
 	});
 	const componentDir = componentNameFinal;
@@ -25,7 +25,7 @@ exports.createComponent = createComponent;
 const createComponentList = (dir, componentName)=>{
 	const componentArr = componentName.split('/');
 	let componentNameFinal = dir+'components/';
-	componentArr.each((item, index)=>{
+	componentArr.foEach((item, index)=>{
 		componentNameFinal += item+'/';
 	});
 	const componentDir = componentNameFinal;
@@ -41,7 +41,7 @@ exports.createComponentList = createComponentList;
 const createComponentLayout = (dir, componentName)=>{
 	const componentArr = componentName.split('/');
 	let componentNameFinal = dir+'components/';
-	componentArr.each((item, index)=>{
+	componentArr.foEach((item, index)=>{
 		componentNameFinal += item+'/';
 	});
 	const componentDir = componentNameFinal;
