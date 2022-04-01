@@ -6,10 +6,8 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles);
 
 
-const {{name}}: FunctionComponent<I{{name}}> = (props) => {
+export const {{name}}: FunctionComponent<I{{name}}> = (props) => {
   return (
     <div className={cx(styles['{{nameL}}-css'], props.className)}>Component content</div>
   )
 }
-
-export default {{name}}

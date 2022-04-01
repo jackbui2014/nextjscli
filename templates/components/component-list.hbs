@@ -7,7 +7,7 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-const {{name}}: FunctionComponent<I{{name}}> = (props) => {
+export const {{name}}: FunctionComponent<I{{name}}> = (props) => {
   let { items } = props;
   return (
   <ul className={cx(styles['{{nameL}}-css'], props.className)}>
@@ -18,5 +18,3 @@ const {{name}}: FunctionComponent<I{{name}}> = (props) => {
     ))}
   </ul>
 )}
-
-export default {{name}}
