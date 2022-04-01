@@ -1,12 +1,14 @@
-import React from 'react'
-import { {{name}}Type } from '../../interfaces/{{name}}';
+import React, { FunctionComponent } from 'react';
+import { I{{name}}Item } from './type';
+import styles from './{{name}}.module.scss';
+import classNames from 'classnames/bind';
 
-type Props = {
-  data: {{name}}Type
-}
+const cx = classNames.bind(styles);
 
-const {{name}}Item = ({ data }: Props) => {
+const {{name}}Item: FunctionComponent<I{{name}}Item> = (props) => {
+  let { data } = props;
   return (
+  <div className={cx(styles['{{name}}Item-css'], props.className)}
   <Link href="/{{name}}s/[id]" as={`/{{name}}s/${data.id}`}>
     <a>
       {data.id}: {data.name}

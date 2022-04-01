@@ -1,16 +1,18 @@
-import * as React from 'react'
+import React, { FunctionComponent } from 'react';
 import {{name}}Item from './Item'
-import { {{name}}Type } from '../../interfaces/{{name}}';
+import { I{{name}}Item } from './type';
+import { I{{name}} } from './type';
+import styles from './{{name}}.module.scss';
+import classNames from 'classnames/bind';
 
-type Props = {
-  items: {{name}}Type[]
-}
+const cx = classNames.bind(styles);
 
-const {{name}} = ({ items }: Props) => {
+const {{name}}: FunctionComponent<I{{name}}> = (props) => {
+  let { items } = props;
   return (
-  <ul>
-    {items.map((item) => (
-      <li key={item.id}>
+  <ul clasName={cx(styles['{{name}}-css'], props.className)}>
+    {items.map((item, index) => (
+      <li key={'{{name}}-'+index}>
         <{{name}}Item data={item} />
       </li>
     ))}

@@ -1,15 +1,14 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react';
+import { I{{name}} } from './type';
 import styles from './{{name}}.module.scss';
 import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
 
-const {{name}} = () => {
+const {{name}}: FunctionComponent<I{{name}}> = (props) => {
   return (
-    <>
-    <div>Component content</div>
-    </>
+    <div clasName={cx(styles['{{name}}-css'], props.className)}>Component content</div>
   )
 }
 
