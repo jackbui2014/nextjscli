@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 const {{name}}: FunctionComponent<I{{name}}> = (props) => {
   let { items } = props;
   return (
-  <ul className={cx(styles['{{name}}-css'.toLowerCase()], props.className)}>
+  <ul className={cx(styles['{{nameL}}-css'], props.className)}>
     {items.map((item, index) => (
       <li key={'{{name}}-'+index}>
         <{{name}}Item data={item} />
