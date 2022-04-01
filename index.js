@@ -11,6 +11,7 @@ const createComponent = (dir, componentName)=>{
 		componentNameFinal += item+'/';
 	});
 	const componentDir = componentNameFinal;
+	componentName = componentArr[componentArr.length - 1];
 	const interfacesDir = dir+'interfaces/';
 	fileControl.createDir('/'+componentDir);
 	//fileControl.createDir('/'+interfacesDir);
@@ -29,6 +30,7 @@ const createComponentList = (dir, componentName)=>{
 		componentNameFinal += item+'/';
 	});
 	const componentDir = componentNameFinal;
+	componentName = componentArr[componentArr.length - 1];
 	fileControl.createDir('/'+componentDir);
 	fileControl.createFileFromTemplate(path.join(__dirname, '/templates/components/component-list.hbs'), componentDir+'index.tsx', componentName);
 	fileControl.createFileFromTemplate(path.join(__dirname, '/templates/components/component-list-item.hbs'), componentDir+'item.tsx', componentName);
@@ -45,6 +47,7 @@ const createComponentLayout = (dir, componentName)=>{
 		componentNameFinal += item+'/';
 	});
 	const componentDir = componentNameFinal;
+	componentName = componentArr[componentArr.length - 1];
 	fileControl.createDir('/'+componentDir);
 	fileControl.createFileFromTemplate(path.join(__dirname, '/templates/components/component-layout.hbs'), componentDir+'index.tsx', componentName);
 	fileControl.createFileFromTemplate(path.join(__dirname, '/templates/components/component.test.hbs'), componentDir+'index.spec.tsx', componentName);
