@@ -37,7 +37,7 @@ exports.renderToString = renderToString;
 const createFileFromTemplate = (templatePath, FilePath, componentName) => {
   var jsonData = {
     name: componentName,
-    nameL: componentName.toLowerCase()
+    nameL: componentName?.toLowerCase()
   };
   // read the file and use the callback to render
   fs.readFile(templatePath, function (err, data) {
